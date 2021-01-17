@@ -18,6 +18,7 @@ class _SandboxState extends State<Sandbox> {
         width: _width,
         duration: Duration(milliseconds: 900),
         color: _color,
+        curve: Curves.bounceInOut,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
