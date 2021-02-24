@@ -31,19 +31,19 @@ class _TripListState extends State<TripList> {
     ];
 
     Future ft = Future(() {});
-    
-      _trips.forEach((Trip trip) {
-        ft = ft.then((_) {
-          return Future.delayed(const Duration(milliseconds: 100), () {
-            _tripTiles.add(_buildTile(trip));
-            _listKey.currentState.insertItem(_tripTiles.length - 1);
-          });
+
+    _trips.forEach((Trip trip) {
+      ft = ft.then((_) {
+        return Future.delayed(const Duration(milliseconds: 100), () {
+          _tripTiles.add(_buildTile(trip));
+          _listKey.currentState.insertItem(_tripTiles.length - 1);
         });
       });
-  
+    });
   }
 
   Widget _buildTile(Trip trip) {
+    
     return ListTile(
       onTap: () {
         Navigator.push(context,
