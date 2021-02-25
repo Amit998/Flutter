@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
+import 'package:getx_and_obx/controllers/valueControllers.dart';
 
 class GetxObx extends StatefulWidget {
   @override
@@ -33,19 +34,28 @@ class _BodyState extends State<Body> {
         padding: EdgeInsets.all(20),
         child: Column(
           children: [
-            Text(
-              "Thsi is value 1: ",
-              style: TextStyle(fontSize: 20),
+            GetX<ValueController>(
+              init: ValueController(),
+              builder: (_) {
+                return Text(
+                  "Thsi is value 1: ${_.valueModel.value.value1} ",
+                  style: TextStyle(fontSize: 20),
+                );
+              },
             ),
-            Text(
-              "Thsi is value 2: ",
-              style: TextStyle(fontSize: 20),
-            ),
+            Obx(() => Text(
+                  "Thsi is value 1: ${Get.find<ValueController>().valueModel.value.value2} ",
+                  style: TextStyle(fontSize: 20),
+                )),
             FlatButton(
-              onPressed: () {},
+              color: Colors.black,
+              onPressed: () {
+                Get.find<ValueController>().updateTheValue(
+                    "The Growing Dev", "Learn and grow together");
+              },
               child: Text("Change The Value",
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                   )),
             )
           ],

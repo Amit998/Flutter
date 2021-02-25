@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:getx_and_obx/getxobxpage.dart';
+import 'package:getx_and_obx/pages/navigatePage.dart';
+import 'package:getx_and_obx/pages/snackBarDialogBarBottomSheet.dart';
 
 class NameModel {
   // NameModel({this.names});
@@ -14,11 +16,11 @@ List<NameModel> names = <NameModel>[
   NameModel(
       title: "SnackBar,Dialog and Bootm Sheet",
       color: Colors.blue,
-      press: GetxObx()),
+      press: SDBSPage()),
   NameModel(
       title: "Navigation | Send data to other Screen",
       color: Colors.green,
-      press: GetxObx()),
+      press: NavigatePage()),
   NameModel(
       title: "State Management  | GetBuilder",
       color: Colors.deepOrange,

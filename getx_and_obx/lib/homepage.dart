@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import './NameModel.dart';
 
 class HomePage extends StatefulWidget {
@@ -62,8 +63,10 @@ class SelectedCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => names.press));
+        // Navigator.push(
+        //     context, MaterialPageRoute(builder: (context) => names.press));
+
+        Get.to(names.press,arguments: "Hello From The Home Page");
       },
       child: Container(
         padding: EdgeInsets.all(10),
