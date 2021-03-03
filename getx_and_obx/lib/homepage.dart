@@ -66,7 +66,8 @@ class SelectedCard extends StatelessWidget {
         // Navigator.push(
         //     context, MaterialPageRoute(builder: (context) => names.press));
 
-        Get.to(names.press,arguments: "Hello From The Home Page");
+        Get.to(names.press, arguments: "Hello From The Home Page");
+        // Get.toNamed('/navigatePage', arguments: ["The", "Growing Developer"]);
       },
       child: Container(
         padding: EdgeInsets.all(10),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:getx_and_obx/getBuilder.dart';
 import 'package:getx_and_obx/getxobxpage.dart';
 import 'package:getx_and_obx/pages/navigatePage.dart';
 import 'package:getx_and_obx/pages/snackBarDialogBarBottomSheet.dart';
@@ -24,7 +25,7 @@ List<NameModel> names = <NameModel>[
   NameModel(
       title: "State Management  | GetBuilder",
       color: Colors.deepOrange,
-      press: GetxObx()),
+      press: GetBuilderPage()),
   NameModel(
       title: "State Management | Getx & Obx",
       color: Colors.blueGrey,
