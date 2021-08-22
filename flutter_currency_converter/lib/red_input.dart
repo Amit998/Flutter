@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_currency_converter/currencyService.dart';
 
-class InputWhitePage extends StatefulWidget {
+class InputRedPage extends StatefulWidget {
   final ogignCurrency;
   final convCurrency;
 
-  const InputWhitePage({Key key, this.ogignCurrency, this.convCurrency})
+  const InputRedPage({Key key, this.ogignCurrency, this.convCurrency})
       : super(key: key);
 
   @override
   _InputWhitePageState createState() => _InputWhitePageState();
 }
 
-class _InputWhitePageState extends State<InputWhitePage> {
+class _InputWhitePageState extends State<InputRedPage> {
   var currInput = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // resizeToAvoidBottomInset: true,
+      backgroundColor: Color(0xFFEC5759).withOpacity(0.2),
       body: Column(
         children: [
           SizedBox(
@@ -214,7 +216,7 @@ class _InputWhitePageState extends State<InputWhitePage> {
     );
   }
 
-  Widget calculateNumber(number) {
+  void calculateNumber(number) {
     if (currInput == 0) {
       setState(() {
         currInput = number;
